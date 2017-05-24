@@ -136,6 +136,14 @@ app.config(function($routeProvider, $provide, $httpProvider,
         templateUrl: "views/Inicio/inicio.html",
         controller: "IndexController"
     }).otherwise({
-        redirectTo: "/"
+        resolve: {
+            "check": function($location, $rootScope) {
+                if ($rootScope.loggedIn) {
+                    $location.path('/inicio');
+                } else {
+                    $location.path('/');
+                }
+            }
+        }
     });
 });

@@ -1,0 +1,18 @@
+<div ng-controller="LoginController">
+    <form id="myLogin">
+        <div class="form-group">
+            <label for="usuario">Usuario:</label>
+            <input type="text" class="form-control" name="usuário" id="usuario" ng-model="usuario">
+        </div>
+        <br>
+        <div class="form-group">
+            <label for="senha">Senha:</label>
+            <input type="password" class="form-control" name="senha" id="senha" ng-model="senha">
+        </div>
+        <br>
+        <button type="submit" ng-click="submit()" class="btn btn-success"> 
+            <span class="glyphicon glyphicon-ok"></span> Login
+        </button>
+
+    </form>
+</div>

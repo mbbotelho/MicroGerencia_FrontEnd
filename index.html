@@ -20,6 +20,7 @@
     <script src="js/controller/EstoqueController.js"></script>
     <script src="js/controller/PessoasController.js"></script>
     <script src="js/controller/LoginController.js"></script>
+
     <!-- Bootstrap Core CSS -->
     <link href="../vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
     <!-- MetisMenu CSS -->
@@ -35,19 +36,28 @@
 
 </head>
 
-<body>
-    <nav class="navbar navbar-default navbar-static-top" role="navigation" style="margin-bottom: 0">
-        <div class="navbar-header">
-            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+<body ng-controller="LoginController">
+    <div>
+        <nav class="navbar navbar-default navbar-static-top" role="navigation" style="margin-bottom: 0">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
                     <span class="sr-only">Toggle navigation</span>
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-            <a class="navbar-brand" href="/#!/inicio">MicroGerência - FastFrango</a>
-        </div>
-        <!-- /.navbar-header -->
-    </nav>
+                <a class="navbar-brand" href="/#!/inicio">MicroGerência - FastFrango</a>
+
+            </div>
+            <div class="nav navbar-right top-nav">
+                <a class="navbar-brand" href="/#!/" ng-click="logout()">
+                    <p ng-bind="entrarSair"></p>
+                </a>
+            </div>
+            <!-- /.navbar-header -->
+
+        </nav>
+    </div>
 
     <br>
     <br>

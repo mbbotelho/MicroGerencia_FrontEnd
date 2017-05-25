@@ -25,6 +25,36 @@ app.config(function($routeProvider, $provide, $httpProvider,
         },
         templateUrl: "views/Cardapio/TelaPrincipalCardapio.html",
         controller: "CardapioController"
+    }).when("/cadastroItensCardapio", {
+        resolve: {
+            "check": function($location, $rootScope) {
+                if (!$rootScope.loggedIn) {
+                    $location.path('/');
+                }
+            }
+        },
+        templateUrl: "views/Cardapio/CadastroItensCardapio.html",
+        controller: "CadastroItensController"
+    }).when("/cadastroItensExtraCardapio", {
+        resolve: {
+            "check": function($location, $rootScope) {
+                if (!$rootScope.loggedIn) {
+                    $location.path('/');
+                }
+            }
+        },
+        templateUrl: "views/Cardapio/CadastroItensExtraCardapio.html",
+        controller: "cadastroItensExtraController"
+    }).when("/tabelaCardapio", {
+        resolve: {
+            "check": function($location, $rootScope) {
+                if (!$rootScope.loggedIn) {
+                    $location.path('/');
+                }
+            }
+        },
+        templateUrl: "views/Cardapio/TabelaCardapio.html",
+        controller: "TabelaCardapioController"
     }).when("/cadastroProduto", {
         resolve: {
             "check": function($location, $rootScope) {
@@ -34,7 +64,7 @@ app.config(function($routeProvider, $provide, $httpProvider,
             }
         },
         templateUrl: "views/Estoque/CadastroProduto.html",
-        controller: "EstoqueController"
+        controller: "CadastroProdutoController"
     }).when("/cadastroCompra", {
         resolve: {
             "check": function($location, $rootScope) {
@@ -43,8 +73,8 @@ app.config(function($routeProvider, $provide, $httpProvider,
                 }
             }
         },
-        templateUrl: "views/Cardapio/TelaPrincipalCardapio.html",
-        controller: "EstoqueController"
+        templateUrl: "views/Estoque/CadastroCompra.html",
+        controller: "CadastroCompraController"
     }).when("/tabelaProduto", {
         resolve: {
             "check": function($location, $rootScope) {
@@ -53,8 +83,8 @@ app.config(function($routeProvider, $provide, $httpProvider,
                 }
             }
         },
-        templateUrl: "views/Cardapio/TelaPrincipalCardapio.html",
-        controller: "EstoqueController"
+        templateUrl: "views/Cardapio/TabelaProduto.html",
+        controller: "TabelaProdutoController"
     }).when("/pessoas", {
         resolve: {
             "check": function($location, $rootScope) {
@@ -113,9 +143,9 @@ app.config(function($routeProvider, $provide, $httpProvider,
                 }
             }
         },
-        templateUrl: "views/Pessoas/TabelaClientes.html",
+        templateUrl: "views/Despesa/TelaPrincipalDespesa.html",
         controller: "DespesaController"
-    }).when("/relatorio", {
+    }).when("/cadastroTipoDespesa", {
         resolve: {
             "check": function($location, $rootScope) {
                 if (!$rootScope.loggedIn) {
@@ -123,8 +153,28 @@ app.config(function($routeProvider, $provide, $httpProvider,
                 }
             }
         },
-        templateUrl: "views/Pessoas/TabelaClientes.html",
-        controller: "RelatorioController"
+        templateUrl: "views/Despesa/CadastroTipoDespesa.html",
+        controller: "CadastroDespesaController"
+    }).when("/cadastroDespesa", {
+        resolve: {
+            "check": function($location, $rootScope) {
+                if (!$rootScope.loggedIn) {
+                    $location.path('/');
+                }
+            }
+        },
+        templateUrl: "views/Despesa/CadastroDespesa.html",
+        controller: "CadastroDespesaController"
+    }).when("/tabelaDespesa", {
+        resolve: {
+            "check": function($location, $rootScope) {
+                if (!$rootScope.loggedIn) {
+                    $location.path('/');
+                }
+            }
+        },
+        templateUrl: "views/Despesa/TabelaDespesa.html",
+        controller: "TabelaDespesaController"
     }).when("/inicio", {
         resolve: {
             "check": function($location, $rootScope) {

@@ -83,7 +83,7 @@ app.config(function($routeProvider, $provide, $httpProvider,
                 }
             }
         },
-        templateUrl: "views/Cardapio/TabelaProduto.html",
+        templateUrl: "views/Estoque/TabelaProduto.html",
         controller: "TabelaProdutoController"
     }).when("/pessoas", {
         resolve: {

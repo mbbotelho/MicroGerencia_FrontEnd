@@ -1,7 +1,7 @@
 <body data-ng-controller="CadastroDespesaController">
     <div class="container">
         <div class="page-header">
-            <h1>Cadastro de Tipos de Despesa</h1>
+            <h1>Cadastro de Despesa</h1>
         </div>
         <div class="row">
             <div class="col-sm-8">
@@ -16,10 +16,19 @@
 						    </select>
                     </div>
                     <br>
-                    <br>
                     <div class="form-group">
                         <label for="nome">Valor</label>
                         <input type="number" class="form-control" id="valor">
+                    </div>
+                    <br>
+                    <div class="form-group">
+                        <label for="nome">Data do Pagamento</label>
+                        <input type="date" class="form-control" id="dtaPag">
+                    </div>
+                    <br>
+                    <div class="form-group">
+                        <label for="nome">Data do Vencimento</label>
+                        <input type="date" class="form-control" id="dtaPag">
                     </div>
                     <br>
                     <button type="button" class="btn btn-info" data-toggle="modal" data-target="#janela">

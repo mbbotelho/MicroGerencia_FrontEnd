@@ -6,34 +6,50 @@
     <meta name="viewport" content="width=device-width">
     <title>MicroGerencia</title>
     <!-- Bootstrap -->
-    <link rel="stylesheet" href="js/script/bootstrap/css/estilo.css">
-    <link rel="stylesheet" href="../vendor/bootstrap/css/bootstrap.min.css">
-    <link rel="stylesheet" href="js/script/bootstrap/css/bootstrap-theme.min.css">
-    <link rel="stylesheet" href="../vendor/metisMenu/metisMenu.min.css">
-    <link rel="stylesheet" href="../dist/css/sb-admin-2.css">
-    <link rel="stylesheet" href="../vendor/morrisjs/morris.css">
+    <link rel="stylesheet" href="vendor/bootstrap/css/estilo.css">
+    <link rel="stylesheet" href="vendor/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="vendor/bootstrap/css/bootstrap-theme.min.css">
+    <link rel="stylesheet" href="vendor/metisMenu/metisMenu.min.css">
+    <link rel="stylesheet" href="dist/css/sb-admin-2.css">
+    <link rel="stylesheet" href="vendor/morrisjs/morris.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.min.js"></script>
+    <script src="vendor/metisMenu/metisMenu.min.js"></script>
+    <script src="vendor/datatables/js/jquery.dataTables.min.js"></script>
+    <script src="vendor/datatables-plugins/dataTables.bootstrap.min.js"></script>
+    <script src="vendor/datatables-responsive/dataTables.responsive.js"></script>
+    <script src="dist/js/sb-admin-2.js"></script>
 
     <!-- Angular -->
-    <script src="js/script/angular.min.js"></script>
-    <script src="js/script/angular-route.js"></script>
-    <script src="js/script/angular-resource.js"></script>
-    <script src="js/main.js"></script>
-    <script src="js/controller/IndexController.js"></script>
-    <script src="js/controller/CardapioController.js"></script>
-    <script src="js/controller/EstoqueController.js"></script>
-    <script src="js/controller/PessoasController.js"></script>
-    <script src="js/controller/LoginController.js"></script>
-    <script src="js/controller/CadastroCompraController.js"></script>
-    <script src="js/controller/CadastroProdutoController.js"></script>
-    <script src="js/controller/PedidoController.js"></script>
-    <script src="js/controller/TabelaProdutoController.js"></script>
-    <script src="js/controller/CadastroItensExtraController.js"></script>
-    <script src="js/controller/CadastroItensController.js"></script>
-    <script src="js/controller/DespesaController.js"></script>
-    <script src="js/controller/CadastroDespesaController.js"></script>
-    <script src="js/controller/CadastroTipoDespesaController.js"></script>
-    <script src="js/controller/TabelaDespesaController.js"></script>
+    <script src="vendor/angular/angular.min.js"></script>
+    <script src="vendor/angular/angular-route.js"></script>
+    <script src="vendor/angular/angular-resource.js"></script>
+    <script src="js/main/main.js"></script>
+    <script src="js/main/controller/IndexController.js"></script>
+    <script src="js/main/controller/CardapioController.js"></script>
+    <script src="js/main/controller/EstoqueController.js"></script>
+    <script src="js/main/controller/PessoasController.js"></script>
+    <script src="js/main/controller/LoginController.js"></script>
+    <script src="js/main/controller/CadastroCompraController.js"></script>
+    <script src="js/main/controller/CadastroProdutoController.js"></script>
+    <script src="js/main/controller/PedidoController.js"></script>
+    <script src="js/main/controller/TabelaProdutoController.js"></script>
+    <script src="js/main/controller/CadastroItensExtraController.js"></script>
+    <script src="js/main/controller/CadastroItensController.js"></script>
+    <script src="js/main/controller/DespesaController.js"></script>
+    <script src="js/main/controller/CadastroDespesaController.js"></script>
+    <script src="js/main/controller/CadastroTipoDespesaController.js"></script>
+    <script src="js/main/controller/TabelaDespesaController.js"></script>
+    <script src="js/main/controller/TabelaCardapioController.js"></script>
+
+    <script>
+        $(document).ready(function() {
+            $('#dataTables-example').DataTable({
+                responsive: true
+            });
+        });
+    </script>
 </head>
 
 <body ng-controller="LoginController">

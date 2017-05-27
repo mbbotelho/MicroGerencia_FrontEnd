@@ -1,0 +1,14 @@
+{
+    "name": "MicroGerencia-frontend",
+    "description": "Projeto em angular para uma microGerencia de um restaurante de Frango.",
+    "version": "0.0.1",
+    "homepage": "https://github.com/mbbotelho/MicroGerencia_FrontEnd",
+    "license": "MIT",
+    "private": false,
+    "dependencies": {
+        "angular": "1.6.4",
+        "angular-resource": "1.6.4",
+        "angular-route": "1.6.4",
+        "bootstrap": "3.3.7"
+    }
+}

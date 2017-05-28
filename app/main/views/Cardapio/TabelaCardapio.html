@@ -11,7 +11,7 @@
                     </div>
                     <!-- /.panel-heading -->
                     <div class="panel-body">
-                        <table width="100%" class="table table-striped table-bordered table-hover" id="dataTables-example">
+                        <table width="100%" class="table table-striped table-bordered table-hover" id="cardapioTab">
                             <thead>
                                 <tr>
                                     <th ng-repeat="titulo in titles">{{titulo}}</th>
@@ -23,9 +23,9 @@
                                     <td>{{item.serve}}</td>
                                     <td>{{item.itemExtra}}</td>
                                     <td>
-                                        <a href="#"> <span class="glyphicon glyphicon-trash"></span>
+                                        <button ng-click="remove()"> <span class="glyphicon glyphicon-trash"></span>
                                         </a>
-                                        <a href="#"> <span class="glyphicon glyphicon-plus"></span>
+                                        <a ng-click="edit()"> <span class="glyphicon glyphicon-plus"></span>
                                         </a>
                                     </td>
                                     </p>
@@ -33,11 +33,8 @@
                             </tbody>
                         </table>
                     </div>
-                    <!-- /.panel-body -->
                 </div>
-                <!-- /.panel -->
             </div>
-            <!-- /.col-lg-12 -->
         </div>
     </div>
 </body>

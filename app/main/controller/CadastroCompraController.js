@@ -1,4 +1,4 @@
- angular.module('MicroGerApp')
-     .controller('CadastroCompraController', ['$scope', function($scope) {
+angular.module('MicroGerApp')
+    .controller('CadastroCompraController', ['$scope', function($scope) {
 
-     }]);
+    }]);

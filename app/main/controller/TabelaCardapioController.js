@@ -1,14 +1,15 @@
 angular.module('MicroGerApp')
     .controller('TabelaCardapioController', ['$scope', '$http', function($scope, $http) {
-        $http.get('json/Dicionario.json').success(function(data) {
-            $scope.dicionario = data;
+
+        $http({
+            method: 'GET',
+            url: 'json/Dicionario.json'
+        }).then(function successCallback(response) {
+            $scope.page = response.data.cardapio.page;
+            $scope.tabela = response.data.cardapio.tabela;
+            $scope.titles = response.data.cardapio.titles;
         });
 
-        $scope.page = dicionario.cardapio.tabela;
-        $scope.titles = [
-            "Produto", "Serve Quantas Pessoas", "Item Extra", "Ações"
-        ];
-        $scope.tabela = "Itens Cadastrados no Cardápio";
         $scope.itens = [{
                 nome: 'Porção 1',
                 serve: 3,
@@ -26,4 +27,5 @@ angular.module('MicroGerApp')
                 itemExtra: 'nada'
             }
         ];
+
     }]);

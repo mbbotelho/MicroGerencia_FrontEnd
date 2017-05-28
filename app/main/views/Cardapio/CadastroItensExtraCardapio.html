@@ -1,0 +1,34 @@
+<body data-ng-controller="CadastroItensExtraController">
+    <div class="container">
+        <div class="page-header">
+            <h1>Cadastro de Itens Extras do Cardápio</h1>
+        </div>
+        <div class="row">
+            <div class="col-sm-8">
+                <form>
+                    <div class="form-group">
+                        <label for="nome">Nome</label> <input type="text" class="form-control" id="nome">
+                    </div>
+                    <br>
+                    <div class="form-group">
+                        <label for="nome">Quantidade</label> <input type="number" class="form-control" id="qtd">
+                    </div>
+                    <br>
+                    <div class="form-group">
+                        <label for="nome">Unidade de Medida</label> <input type="text" class="form-control" id="qtd">
+                    </div>
+                    <br>
+                    <button type="button" class="btn btn-info" data-toggle="modal" data-target="#janela">
+						<span class="glyphicon glyphicon-search"></span> Listar
+					</button>
+                    <button type="submit" class="btn btn-danger">
+						<span class="glyphicon glyphicon-trash"></span> Excluir
+					</button>
+                    <button type="submit" class="btn btn-success">
+						<span class="glyphicon glyphicon-ok"></span> Salvar
+					</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</body>

@@ -1,0 +1,47 @@
+<body data-ng-controller="CadastroDespesaController">
+    <div class="container">
+        <div class="page-header">
+            <h1>Cadastro de Despesa</h1>
+        </div>
+        <div class="row">
+            <div class="col-sm-8">
+                <form>
+                    <div class="form-group">
+                        <label for="nome">Nome</label>
+                        <select class="form-control" id="sel2">
+                                <option>Água</option>
+							    <option>Luz</option>
+							    <option>Carpinteiro</option>
+							    <option>Aluguel</option>
+						    </select>
+                    </div>
+                    <br>
+                    <div class="form-group">
+                        <label for="nome">Valor</label>
+                        <input type="number" class="form-control" id="valor">
+                    </div>
+                    <br>
+                    <div class="form-group">
+                        <label for="nome">Data do Pagamento</label>
+                        <input type="date" class="form-control" id="dtaPag">
+                    </div>
+                    <br>
+                    <div class="form-group">
+                        <label for="nome">Data do Vencimento</label>
+                        <input type="date" class="form-control" id="dtaPag">
+                    </div>
+                    <br>
+                    <button type="button" class="btn btn-info" data-toggle="modal" data-target="#janela">
+						<span class="glyphicon glyphicon-search"></span> Listar
+					</button>
+                    <button type="submit" class="btn btn-danger">
+						<span class="glyphicon glyphicon-trash"></span> Excluir
+					</button>
+                    <button type="submit" class="btn btn-success">
+						<span class="glyphicon glyphicon-ok"></span> Salvar
+					</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</body>

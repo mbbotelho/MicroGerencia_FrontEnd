@@ -1,21 +1,21 @@
 <body data-ng-controller="CadastroItensExtraController">
     <div class="container">
         <div class="page-header">
-            <h1>Cadastro de Itens Extras do Cardápio</h1>
+            <h1>{{titulo}}</h1>
         </div>
         <div class="row">
             <div class="col-sm-8">
                 <form>
                     <div class="form-group">
-                        <label for="nome">Nome</label> <input type="text" class="form-control" id="nome">
+                        <label for="nome">Nome</label> <input type="text" class="form-control" id="nome" ng-model="nome">
                     </div>
                     <br>
                     <div class="form-group">
-                        <label for="nome">Quantidade</label> <input type="number" class="form-control" id="qtd">
+                        <label for="nome">Quantidade</label> <input type="number" class="form-control" id="qtd" ng-model="quantidade">
                     </div>
                     <br>
                     <div class="form-group">
-                        <label for="nome">Unidade de Medida</label> <input type="text" class="form-control" id="qtd">
+                        <label for="nome">Unidade de Medida</label> <input type="text" class="form-control" id="unidade" ng-model="unidade">
                     </div>
                     <br>
                     <button type="button" class="btn btn-info" data-toggle="modal" data-target="#janela">

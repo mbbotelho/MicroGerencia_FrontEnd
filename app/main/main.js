@@ -24,36 +24,6 @@ app.config(['$routeProvider', function($routeProvider) {
         },
         templateUrl: "app/main/views/Cardapio/TelaPrincipalCardapio.html",
         controller: "CardapioController"
-    }).when("/cadastroItensCardapio", {
-        resolve: {
-            "check": function($location, $rootScope) {
-                if (!$rootScope.loggedIn) {
-                    $location.path('/');
-                }
-            }
-        },
-        templateUrl: "app/main/views/Cardapio/CadastroItensCardapio.html",
-        controller: "CadastroItensController"
-    }).when("/cadastroItensExtraCardapio", {
-        resolve: {
-            "check": function($location, $rootScope) {
-                if (!$rootScope.loggedIn) {
-                    $location.path('/');
-                }
-            }
-        },
-        templateUrl: "app/main/views/Cardapio/CadastroItensExtraCardapio.html",
-        controller: "cadastroItensExtraController"
-    }).when("/tabelaCardapio", {
-        resolve: {
-            "check": function($location, $rootScope) {
-                if (!$rootScope.loggedIn) {
-                    $location.path('/');
-                }
-            }
-        },
-        templateUrl: "app/main/views/Cardapio/TabelaCardapio.html",
-        controller: "TabelaCardapioController"
     }).when("/cadastroProduto", {
         resolve: {
             "check": function($location, $rootScope) {
@@ -183,6 +153,16 @@ app.config(['$routeProvider', function($routeProvider) {
             }
         },
         templateUrl: "app/main/views/Inicio/inicio.html",
+        controller: "IndexController"
+    }).when("/relatorio", {
+        resolve: {
+            "check": function($location, $rootScope) {
+                if (!$rootScope.loggedIn) {
+                    $location.path('/');
+                }
+            }
+        },
+        templateUrl: "app/main/views/Relatorio/TelaPrincipal.html",
         controller: "IndexController"
     }).otherwise({
         resolve: {

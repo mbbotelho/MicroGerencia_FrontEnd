@@ -2,6 +2,8 @@
     "cardapio": {
         "page": "Cardapio",
         "tabela": "Itens Cadastrados no Cardápio",
-        "titles": ["Produto", "Serve Quantas Pessoas", "Item Extra", "Ações"]
+        "titles": ["Produto", "Serve Quantas Pessoas", "Item Extra", "Ações"],
+        "itemExtra": "Cadastro de Itens Extras do Cardápio",
+        "item": "Cadastro de Itens do Cardápio"
     }
 }

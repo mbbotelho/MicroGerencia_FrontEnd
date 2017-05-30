@@ -1,17 +1,22 @@
 <body ng-controller="CardapioController">
-
     <div class="container">
-
         <div class="row">
             <div class="col-sm-4"></div>
             <div class="col-sm-4">
-                <a href="/#!/cardapio/cadastrarItens" class="btn btn-default btn-block">Cadastrar Itens do Cadápio</a> </br>
-                <a href="/#!/cardapio/cadastrarExtra" class="btn btn-default btn-block">Cadastrar Itens Extra</a> </br>
-                <a href="/#!/cardapio/listar" class="btn btn-default btn-block">Visualizar Cardápio</a></br>
+                <a href="/#!/cardapio/listar" class="btn btn-default btn-block">Visualizar Cardápio Completo</a><br/>
+
+                <div class="row">
+                    <div class="col-sm-6"> <a href="/#!/cardapio/cadastrarItens" class="btn btn-primary btn-lg"> Cadastrar <br/>Itens</a><br/></div>
+                    <div class="col-sm-6"> <a href="/#!/cardapio/listarItens" class="btn btn-success btn-lg">Visualizar <br/> Itens</a><br/></div>
+                    <br/>
+                </div>
+                <div class="row">
+                    <div class="col-sm-6"><a href="/#!/cardapio/cadastrarExtra" class="btn btn-primary btn-lg">Cadastrar <br/> Itens Extras</a><br/></div>
+                    <div class="col-sm-6"><a href="/#!/cardapio/listarExtra" class="btn btn-success btn-lg">Visualizar <br/> Itens Extra</a><br/></div>
+                </div>
+
             </div>
             <div class="col-sm-4"></div>
         </div>
-        <!-- row -->
-
     </div>
 </body>

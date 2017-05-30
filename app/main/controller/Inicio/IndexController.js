@@ -1,7 +1,7 @@
  angular.module('MicroGerApp')
-     .controller('IndexController', function($scope, $http) {
-         //  $http.get('http://localhost:8080').
-         //  then(function(response) {
-         //      $scope.greeting = response.data;
-         //  });
-     });
+     .controller('IndexController', ['$scope', '$http', '$rootScope', function($scope, $http, $rootScope) {
+         $scope.showSideBar = true;
+         if ($rootScope.loggedIn) {
+             $scope.showSideBar = true;
+         }
+     }]);

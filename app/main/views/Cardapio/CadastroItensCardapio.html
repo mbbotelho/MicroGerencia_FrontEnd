@@ -6,76 +6,39 @@
         <div class="row">
             <div class="col-sm-8">
                 <form>
-
                     <div class="form-group">
                         <label for="nome">Nome do produto</label>
                         <input type="text" class="form-control" id="qtd">
                     </div>
-
+                    <div class="row">
+                        <div class="form-group col-sm-6">
+                            <label for="tipo">Tipo de Item</label>
+                            <select class="form-control" id="sel1" ng-options="item as item.nome for item in tipoItens track by item.id" ng-model="item">
+						</select>
+                        </div>
+                    </div>
                     <div class="row">
                         <div class="form-group col-sm-6">
                             <label for="qtd">Quantidade</label> <input type="number" class="form-control" id="qtd">
                         </div>
-
-                        <div class="form-group col-sm-6">
-                            <label for="tipo">Tipo de Item</label>
-                            <select class="form-control" id="sel1">
-							<option>Bebida</option>
-							<option>Porção</option>
-							<option>Lanche</option>
-							<option>Açai</option>
+                    </div>
+                    <div class="form-group row">
+                        <div class="col-sm-6">
+                            <label for="tipo">Quantidade de Itens Extra</label>
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <div class="col-sm-6">
+                            <select class="form-control" id="qtdItemSel" ng-options="qtd as qtd.nome for qtd in qtItens track by qtd.id" ng-model="qtd">
 						</select>
                         </div>
                     </div>
-
-                    <div class="form-group row">
-                        <div class="col-sm-4">
-                            <label for="tipo">Quantidade de Itens Extra</label>
-                        </div>
-                        <div class="col-sm-2">
-                            <div class="col-sm-4">
-                                <label>1</label>
-                            </div>
-                            <div class="col-sm-6">
-                                <input class="checkbox" type="checkbox" name="vehicle" value="1">
-                            </div>
-                        </div>
-                        <div class="col-sm-2">
-                            <div class="col-sm-4">
-                                <label>2</label>
-                            </div>
-                            <div class="col-sm-6">
-                                <input class="checkbox" type="checkbox" name="vehicle" value="2">
-                            </div>
-                        </div>
-                        <div class="col-sm-2">
-                            <div class="col-sm-4">
-                                <label>3</label>
-                            </div>
-                            <div class="col-sm-6">
-                                <input class="checkbox" type="checkbox" name="vehicle" value="3">
-                            </div>
-                        </div>
-                        <div class="col-sm-2">
-                            <div class="col-sm-4">
-                                <label>4</label>
-                            </div>
-                            <div class="col-sm-6">
-                                <input class="checkbox" type="checkbox" name="vehicle" value="4">
-                            </div>
-                        </div>
-                    </div>
-
                     <div class="form-group">
                         <label for="valor">Valor</label> <input type="number" class="form-control" id="valor">
                     </div>
-
                     <br>
-                    <button type="button" class="btn btn-info" data-toggle="modal" data-target="#janela">
-						<span class="glyphicon glyphicon-search"></span> Listar
-					</button>
-                    <button type="submit" class="btn btn-danger">
-						<span class="glyphicon glyphicon-trash"></span> Excluir
+                    <button type="reset" class="btn btn-primary">
+						<span class="glyphicon glyphicon-trash"></span> Limpar
 					</button>
                     <button type="submit" class="btn btn-success">
 						<span class="glyphicon glyphicon-ok"></span> Salvar

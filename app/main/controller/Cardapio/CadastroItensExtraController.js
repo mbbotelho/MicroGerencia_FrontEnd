@@ -7,6 +7,4 @@ app.controller('CadastroItensExtraController', ['$scope', '$http', function($sco
     }).then(function successCallback(response) {
         $scope.titulo = response.data.cardapio.itemExtra;
     });
-
-
 }]);

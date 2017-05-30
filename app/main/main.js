@@ -1,4 +1,4 @@
-var app = angular.module('MicroGerApp', ['ngRoute', 'ngResource']);
+var app = angular.module('MicroGerApp', ['ngRoute', 'ngResource', 'modal']);
 
 app.config(['$routeProvider', function($routeProvider) {
     $routeProvider.when("/", {
@@ -24,36 +24,6 @@ app.config(['$routeProvider', function($routeProvider) {
         },
         templateUrl: "app/main/views/Cardapio/TelaPrincipalCardapio.html",
         controller: "CardapioController"
-    }).when("/cadastroProduto", {
-        resolve: {
-            "check": function($location, $rootScope) {
-                if (!$rootScope.loggedIn) {
-                    $location.path('/');
-                }
-            }
-        },
-        templateUrl: "app/main/views/Estoque/CadastroProduto.html",
-        controller: "CadastroProdutoController"
-    }).when("/cadastroCompra", {
-        resolve: {
-            "check": function($location, $rootScope) {
-                if (!$rootScope.loggedIn) {
-                    $location.path('/');
-                }
-            }
-        },
-        templateUrl: "app/main/views/Estoque/CadastroCompra.html",
-        controller: "CadastroCompraController"
-    }).when("/tabelaProduto", {
-        resolve: {
-            "check": function($location, $rootScope) {
-                if (!$rootScope.loggedIn) {
-                    $location.path('/');
-                }
-            }
-        },
-        templateUrl: "app/main/views/Estoque/TabelaProduto.html",
-        controller: "TabelaProdutoController"
     }).when("/pessoas", {
         resolve: {
             "check": function($location, $rootScope) {
@@ -176,3 +146,12 @@ app.config(['$routeProvider', function($routeProvider) {
         }
     });
 }]);
+
+app.modalConfig = function(modal) {
+    if (modal === true)
+        modal = false;
+    else {
+        modal = true;
+    }
+    return modal;
+};

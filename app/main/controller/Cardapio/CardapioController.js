@@ -16,6 +16,16 @@ app.config(['$routeProvider', function($routeProvider) {
         },
         templateUrl: "app/main/views/Cardapio/CadastroItensCardapio.html",
         controller: "CadastroItensController"
+    }).when("/cardapio/listarItens", {
+        resolve: {
+            "check": function($location, $rootScope) {
+                if (!$rootScope.loggedIn) {
+                    $location.path('/');
+                }
+            }
+        },
+        templateUrl: "app/main/views/Cardapio/ListarItens.html",
+        controller: "CadastroItensController"
     }).when("/cardapio/cadastrarExtra", {
         resolve: {
             "check": function($location, $rootScope) {

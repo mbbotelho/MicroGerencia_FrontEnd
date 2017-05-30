@@ -1394,6 +1394,10 @@ negotiator@0.6.1:
   version "0.6.1"
   resolved "https://registry.yarnpkg.com/negotiator/-/negotiator-0.6.1.tgz#2b327184e8992101177b28563fb5e7102acd0ca9"
 
+ng-modal@~1.2.0:
+  version "0.0.0"
+  resolved "https://registry.yarnpkg.com/ng-modal/-/ng-modal-0.0.0.tgz#974eaadd467ebfc3b55bc7f97f741b7b006ca3c1"
+
 node-emoji@^1.0.4:
   version "1.5.1"
   resolved "https://registry.yarnpkg.com/node-emoji/-/node-emoji-1.5.1.tgz#fd918e412769bf8c448051238233840b2aff16a1"

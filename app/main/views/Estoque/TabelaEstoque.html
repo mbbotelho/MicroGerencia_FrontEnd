@@ -11,17 +11,17 @@
                     </div>
                     <!-- /.panel-heading -->
                     <div class="panel-body">
-                        <table width="100%" class="table table-striped table-bordered table-hover" id="cardapioTab">
+                        <table width="100%" class="table table-striped table-bordered table-hover" id="estoqueTab">
                             <thead>
                                 <tr>
                                     <th ng-repeat="titulo in titles">{{titulo}}</th>
                                 </tr>
                             </thead>
                             <tbody>
-                                <tr ng-repeat="item in itens">
+                                <tr ng-repeat="item in itensEstoque">
                                     <td>{{item.nome}}</td>
-                                    <td>{{item.serve}}</td>
-                                    <td>{{item.itemExtra}}</td>
+                                    <td>{{item.quantidade}}</td>
+                                    <td>{{item.unidade}}</td>
                                     <td>
                                         <button ng-click="remove()"> <span class="glyphicon glyphicon-trash"></span>
                                         </a>

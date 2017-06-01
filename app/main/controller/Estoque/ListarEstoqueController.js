@@ -1,5 +1,5 @@
  angular.module('MicroGerApp')
-     .controller('TabelaProdutoController', function($scope, $http) {
+     .controller('ListarEstoqueController', function($scope, $http) {
          $http({
              method: 'GET',
              url: 'json/Dicionario.json'

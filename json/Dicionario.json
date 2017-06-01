@@ -5,5 +5,29 @@
         "titles": ["Produto", "Serve Quantas Pessoas", "Item Extra", "Ações"],
         "itemExtra": "Cadastro de Itens Extras do Cardápio",
         "item": "Cadastro de Itens do Cardápio"
+    },
+
+    "estoque": {
+        "page": {
+            "principal": "Estoque",
+            "compra": "Compras Registradas",
+            "produto": "Produtos Registrados",
+            "cadCompra": "Cadastro de Compras Feitas",
+            "cadProduto": "Cadastro de Produto Comum Utilizado"
+        },
+        "principal": {
+            "titles": ["Produto", "Quantidade", "Unidade", "Ações"],
+            "tabela": "Produtos Presentes no Estoque"
+        },
+        "compra": {
+            "titles": ["Produto", "Quantidade", "Unidade", "Ações"],
+            "tabela": "Produtos Utilizados no Cardápio Cadastrados"
+        },
+        "produto": {
+            "titles": ["Produto", "Quantidade", "Unidade", "Ações"],
+            "tabela": "Compras Cadastradas no Estoque"
+        },
+        "itemExtra": "Cadastro de Itens Extras do Cardápio",
+        "item": "Cadastro de Itens do Cardápio"
     }
 }

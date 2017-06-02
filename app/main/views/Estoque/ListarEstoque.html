@@ -1,4 +1,4 @@
-<div ng-controller="ListarProdutoController">
+<div ng-controller="ListarEstoqueController">
     <div class="page-header">
         <h1>{{page}}</h1>
     </div>
@@ -10,7 +10,7 @@
                 </div>
                 <!-- /.panel-heading -->
                 <div class="panel-body">
-                    <table width="100%" class="table table-striped table-bordered table-hover" id="cardapioTab">
+                    <table width="100%" class="table table-striped table-bordered table-hover" id="estoqueTab">
                         <thead>
                             <tr>
                                 <th ng-repeat="titulo in titles">{{titulo}}</th>
@@ -20,7 +20,10 @@
                             <tr ng-repeat="item in itens">
                                 <td>{{item.id}}</td>
                                 <td>{{item.nome}}</td>
+                                <td>{{item.quantidade}}</td>
                                 <td>{{item.unidade}}</td>
+                                <td>{{item.data}}</td>
+                                <td>{{item.repor}}</td>
                                 <td>
                                     <button ng-click="remove()"> <span class="glyphicon glyphicon-trash"></span>
                                         </button>

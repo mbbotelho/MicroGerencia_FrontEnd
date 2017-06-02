@@ -4,15 +4,15 @@
              method: 'GET',
              url: 'json/Dicionario.json'
          }).then(function successCallback(response) {
-             $scope.page = response.data.estoque.page.principal;
+             $scope.page = response.data.estoque.principal.page;
              $scope.tabela = response.data.estoque.principal.tabela;
              $scope.titles = response.data.estoque.principal.titles;
          });
 
-         $scope.itensEstoque = [{
+         $scope.itens = [{
                  nome: 'Frango',
-                 quantidade: '10',
-                 unidade: 'kg'
+                 quantidade: '100',
+                 unidade: 'Kg'
              },
              {
                  nome: 'Refrigerante',

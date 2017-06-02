@@ -1,23 +1,29 @@
 <body ng-controller="CadastroProdutoController">
-    <div class="container">
-        <div class="page-header">
-            <h1>Cadastro Produto</h1>
-        </div>
-        <div class="row">
-            <div class="col-sm-8">
-                <form>
-                    <div class="form-group">
-                        <label for="nome">Nome</label> <input type="text" class="form-control" id="nome">
-                    </div>
-                    <br>
-                    <button type="reset" class="btn btn-primary">
+    <div class="page-header">
+        <h1>{{titulo}}</h1>
+    </div>
+    <div class="row">
+        <div class="col-sm-8">
+            <form>
+                <div class="form-group">
+                    <label for="nome">Nome</label> <input type="text" class="form-control" id="nome">
+                </div>
+
+                <br/>
+
+                <div class="form-group">
+                    <label for="qtd">Unidade</label>
+                    <select class="form-control" id="tipoUnidadeSel" ng-options="tipoUnidade as tipoUnidade.nome for tipoUnidade in tipoUnidades track by tipoUnidade.id" ng-model="tipoUnidade">
+                        </select>
+                </div>
+
+                <button type="reset" class="btn btn-primary">
 						<span class="glyphicon glyphicon-trash"></span> Limpar
 					</button>
-                    <button type="submit" class="btn btn-success">
+                <button type="submit" class="btn btn-success">
 						<span class="glyphicon glyphicon-ok"></span> Salvar
 					</button>
-                </form>
-            </div>
+            </form>
         </div>
     </div>
 </body>

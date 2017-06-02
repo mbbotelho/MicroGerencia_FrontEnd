@@ -10,7 +10,7 @@ app.config(['$routeProvider', function($routeProvider) {
         resolve: {
             "check": function($location, $rootScope) {
                 if (!$rootScope.loggedIn) {
-                    $location.path('/');
+                    $location.path('/login');
                 }
             }
         },
@@ -20,7 +20,7 @@ app.config(['$routeProvider', function($routeProvider) {
         resolve: {
             "check": function($location, $rootScope) {
                 if (!$rootScope.loggedIn) {
-                    $location.path('/');
+                    $location.path('/login');
                 }
             }
         },
@@ -30,7 +30,7 @@ app.config(['$routeProvider', function($routeProvider) {
         resolve: {
             "check": function($location, $rootScope) {
                 if (!$rootScope.loggedIn) {
-                    $location.path('/');
+                    $location.path('/login');
                 }
             }
         },
@@ -40,7 +40,7 @@ app.config(['$routeProvider', function($routeProvider) {
         resolve: {
             "check": function($location, $rootScope) {
                 if (!$rootScope.loggedIn) {
-                    $location.path('/');
+                    $location.path('/login');
                 }
             }
         },

@@ -22,27 +22,4 @@ angular.module('MicroGerApp')
                 id: 5
             }
         ];
-
-        $scope.tipoUnidades = [{
-                nome: 'Unidade',
-                id: 1
-            },
-            {
-                nome: 'Kg',
-                id: 2
-            },
-
-            {
-                nome: 'g',
-                id: 3
-            },
-            {
-                nome: 'Lata',
-                id: 4
-            },
-            {
-                nome: 'Garrafa',
-                id: 5
-            }
-        ];
     }]);

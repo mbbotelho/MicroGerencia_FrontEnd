@@ -8,26 +8,34 @@
     },
 
     "estoque": {
-        "page": {
-            "principal": "Estoque",
-            "compra": "Compras Registradas",
-            "produto": "Produtos Registrados",
-            "cadCompra": "Cadastro de Compras Feitas",
-            "cadProduto": "Cadastro de Produto Comum Utilizado"
-        },
         "principal": {
-            "titles": ["Produto", "Quantidade", "Unidade", "Ações"],
+            "page": "Vizualizar Estoque",
+            "titles": ["Código", "Produto", "Quantidade", "Unidade", "Última Compra", "Precisa Repor?", "Ações"],
             "tabela": "Produtos Presentes no Estoque"
         },
         "compra": {
-            "titles": ["Produto", "Quantidade", "Unidade", "Ações"],
+            "page": "Compras Registradas",
+            "titles": ["Código", "Produto", "Quantidade", "Unidade", "Valor", "Data da Compra", "Ações"],
             "tabela": "Produtos Utilizados no Cardápio Cadastrados"
         },
         "produto": {
-            "titles": ["Produto", "Quantidade", "Unidade", "Ações"],
+            "page": "Produtos Registrados",
+            "titles": ["Código", "Produto", "Unidade", "Ações"],
             "tabela": "Compras Cadastradas no Estoque"
         },
-        "itemExtra": "Cadastro de Itens Extras do Cardápio",
-        "item": "Cadastro de Itens do Cardápio"
+        "unidade": {
+            "page": "Unidades de Medidas Registrados",
+            "titles": ["Código", "Produto", "Ações"],
+            "tabela": "Produtos Presentes no Estoque"
+        },
+        "cadCompra": {
+            "page": "Cadastro de Compras Feitas"
+        },
+        "cadProduto": {
+            "page": "Cadastro de Produto Comum Utilizado"
+        },
+        "cadUnidade": {
+            "page": "Cadastro de Unidades de Medidas"
+        }
     }
 }

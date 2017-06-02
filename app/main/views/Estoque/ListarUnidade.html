@@ -19,14 +19,13 @@
                             </thead>
                             <tbody>
                                 <tr ng-repeat="item in itens">
-                                    <td>{{item.nome}}</td>
-                                    <td>{{item.serve}}</td>
-                                    <td>{{item.itemExtra}}</td>
+                                    <td>{{item.id}}</td>
+                                    <td>{{item.unidade}}</td>
                                     <td>
                                         <button ng-click="remove()"> <span class="glyphicon glyphicon-trash"></span>
-                                        </a>
-                                        <a ng-click="edit()"> <span class="glyphicon glyphicon-plus"></span>
-                                        </a>
+                                        </button>
+                                        <button ng-click="edit()"> <span class="glyphicon glyphicon-plus"></span>
+                                        </button>
                                     </td>
                                     </p>
                                 </tr>

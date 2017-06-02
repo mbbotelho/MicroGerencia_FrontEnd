@@ -1,10 +1,8 @@
-<body ng-controller="CadastroCompraController">
+<div ng-controller="CadastroCompraController">
     <div class="container">
-
         <div class="page-header">
             <h1>Tela de Cadastro Compra</h1>
         </div>
-
         <div class="row">
             <div class="col-sm-8">
                 <form>
@@ -13,23 +11,17 @@
                         <select class="form-control" id="tipoProdutoSel" ng-options="tipo as tipo.nome for tipo in tipoProduto track by tipo.id" ng-model="tipo">
                         </select>
                     </div>
-
                     <br/>
                     <div class="form-group">
                         <label for="qtd">Quantidade</label> <input type="number" class="form-control" id="qtd">
                     </div>
-
                     <div class="form-group">
-                        <label for="qtd">Unidade</label>
-                        <select class="form-control" id="tipoUnidadeSel" ng-options="tipoUnidade as tipoUnidade.nome for tipoUnidade in tipoUnidades track by tipoUnidade.id" ng-model="tipoUnidade">
-                        </select>
+                        <label for="qtd">Data da Compra</label> <input type="date" class="form-control" id="qtd">
                     </div>
-
                     <br/>
                     <div class="form-group">
                         <label for="valor">Valor</label> <input type="text" class="form-control" id="valor">
                     </div>
-
                     <br/>
                     <button type="reset" class="btn btn-primary">
 						<span class="glyphicon glyphicon-trash"></span> Limpar
@@ -41,4 +33,4 @@
             </div>
         </div>
     </div>
-</body>
+</div>

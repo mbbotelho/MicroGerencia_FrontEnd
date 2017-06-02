@@ -1,20 +1,31 @@
 <body ng-controller="EstoqueController">
-    <div class="container">
-        <div class="row">
-            <div class="col-sm-4"></div>
-            <div class="col-sm-4">
-                <a href="/#!/cadastroCompra" class="btn btn-default btn-block">Cadastar Compras</a> </br>
-                <a href="/#!/cadastroProduto" class="btn btn-default btn-block">Cadastrar Produto Comuns</a> </br>
-                <a href="/#!/cadastroUnidade" class="btn btn-default btn-block">Cadastrar Unidade de Medida</a> </br>
-
-                <a href="/#!/listarCompra" class="btn btn-default btn-block">Listar Compras</a> </br>
-                <a href="/#!/listarProduto" class="btn btn-default btn-block">Listar Produtos Comuns Cadastrados</a> </br>
-                <a href="/#!/listarUnidade" class="btn btn-default btn-block">Listar Unidade de Medida</a></br>
-                <a href="/#!/listarEstoque" class="btn btn-default btn-block">Visualizar Estoque</a></br>
-            </div>
-            <div class="col-sm-4"></div>
+    <div class="row">
+        <div class="col-sm-2">
         </div>
-        <!-- row -->
+        <div class="col-sm-4">
+            <a href="/#!/cadastroCompra" class="btn btn-default btn-block btn-primary">{{cadCompra}}</a> <br/>
+            <a href="/#!/cadastroProduto" class="btn btn-default btn-block btn-primary">{{cadProduto}}</a> <br/>
+            <a href="/#!/cadastroUnidade" class="btn btn-default btn-block btn-primary">{{cadUnidade}}</a> <br/>
+        </div>
 
+        <div class="col-sm-4">
+            <a href="/#!/listarCompra" class="btn btn-default btn-block btn-info">{{compra}}</a> <br/>
+            <a href="/#!/listarProduto" class="btn btn-default btn-block btn-info">{{produto}}</a> <br/>
+            <a href="/#!/listarUnidade" class="btn btn-default btn-block btn-info">{{unidade}}</a><br/>
+        </div>
+
+        <div class="col-sm-2">
+        </div>
+    </div>
+    <!-- row -->
+
+    <div class="row">
+        <div class="col-sm-2">
+        </div>
+        <div class="col-sm-8">
+            <a href="/#!/listarEstoque" class="btn btn-default btn-block btn-success">{{principal}}</a><br/>
+        </div>
+        <div class="col-sm-2">
+        </div>
     </div>
 </body>

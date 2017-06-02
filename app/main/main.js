@@ -1,14 +1,14 @@
 var app = angular.module('MicroGerApp', ['ngRoute', 'ngResource', 'modal']);
 
 app.config(['$routeProvider', function($routeProvider) {
-    $routeProvider.when("/", {
+    $routeProvider.when("/login", {
         templateUrl: "app/main/views/Login/login.html",
         controller: "LoginController"
     }).when("/estoque", {
         resolve: {
             "check": function($location, $rootScope) {
                 if (!$rootScope.loggedIn) {
-                    $location.path('/');
+                    $location.path('/login');
                 }
             }
         },
@@ -18,7 +18,7 @@ app.config(['$routeProvider', function($routeProvider) {
         resolve: {
             "check": function($location, $rootScope) {
                 if (!$rootScope.loggedIn) {
-                    $location.path('/');
+                    $location.path('/login');
                 }
             }
         },
@@ -28,7 +28,7 @@ app.config(['$routeProvider', function($routeProvider) {
         resolve: {
             "check": function($location, $rootScope) {
                 if (!$rootScope.loggedIn) {
-                    $location.path('/');
+                    $location.path('/login');
                 }
             }
         },
@@ -38,7 +38,7 @@ app.config(['$routeProvider', function($routeProvider) {
         resolve: {
             "check": function($location, $rootScope) {
                 if (!$rootScope.loggedIn) {
-                    $location.path('/');
+                    $location.path('/login');
                 }
             }
         },
@@ -48,7 +48,7 @@ app.config(['$routeProvider', function($routeProvider) {
         resolve: {
             "check": function($location, $rootScope) {
                 if (!$rootScope.loggedIn) {
-                    $location.path('/');
+                    $location.path('/login');
                 }
             }
         },
@@ -58,7 +58,7 @@ app.config(['$routeProvider', function($routeProvider) {
         resolve: {
             "check": function($location, $rootScope) {
                 if (!$rootScope.loggedIn) {
-                    $location.path('/');
+                    $location.path('/login');
                 }
             }
         },
@@ -68,7 +68,7 @@ app.config(['$routeProvider', function($routeProvider) {
         resolve: {
             "check": function($location, $rootScope) {
                 if (!$rootScope.loggedIn) {
-                    $location.path('/');
+                    $location.path('/login');
                 }
             }
         },
@@ -78,7 +78,7 @@ app.config(['$routeProvider', function($routeProvider) {
         resolve: {
             "check": function($location, $rootScope) {
                 if (!$rootScope.loggedIn) {
-                    $location.path('/');
+                    $location.path('/login');
                 }
             }
         },
@@ -88,7 +88,7 @@ app.config(['$routeProvider', function($routeProvider) {
         resolve: {
             "check": function($location, $rootScope) {
                 if (!$rootScope.loggedIn) {
-                    $location.path('/');
+                    $location.path('/login');
                 }
             }
         },
@@ -98,7 +98,7 @@ app.config(['$routeProvider', function($routeProvider) {
         resolve: {
             "check": function($location, $rootScope) {
                 if (!$rootScope.loggedIn) {
-                    $location.path('/');
+                    $location.path('/login');
                 }
             }
         },
@@ -108,17 +108,17 @@ app.config(['$routeProvider', function($routeProvider) {
         resolve: {
             "check": function($location, $rootScope) {
                 if (!$rootScope.loggedIn) {
-                    $location.path('/');
+                    $location.path('/login');
                 }
             }
         },
         templateUrl: "app/main/views/Despesa/TabelaDespesa.html",
         controller: "TabelaDespesaController"
-    }).when("/inicio", {
+    }).when("/", {
         resolve: {
             "check": function($location, $rootScope) {
                 if (!$rootScope.loggedIn) {
-                    $location.path('/');
+                    $location.path('/login');
                 }
             }
         },
@@ -128,7 +128,7 @@ app.config(['$routeProvider', function($routeProvider) {
         resolve: {
             "check": function($location, $rootScope) {
                 if (!$rootScope.loggedIn) {
-                    $location.path('/');
+                    $location.path('/login');
                 }
             }
         },
@@ -138,9 +138,9 @@ app.config(['$routeProvider', function($routeProvider) {
         resolve: {
             "check": function($location, $rootScope) {
                 if ($rootScope.loggedIn) {
-                    $location.path('/inicio');
-                } else {
                     $location.path('/');
+                } else {
+                    $location.path('/login');
                 }
             }
         }

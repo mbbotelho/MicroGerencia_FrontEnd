@@ -44,8 +44,8 @@ app.config(['$routeProvider', function($routeProvider) {
                 }
             }
         },
-        templateUrl: "app/main/views/Cardapio/TabelaCardapio.html",
-        controller: "TabelaCardapioController"
+        templateUrl: "app/main/views/Cardapio/ListarCardapio.html",
+        controller: "ListarCardapioController"
     })
 
 }]);

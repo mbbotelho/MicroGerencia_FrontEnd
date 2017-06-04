@@ -15,7 +15,7 @@ app = angular.module('MicroGerApp')
     }]);
 
 app.config(['$routeProvider', function($routeProvider) {
-    $routeProvider.when("/cadastroProduto", {
+    $routeProvider.when("/estoque/produto/cadastrar", {
         resolve: {
             "check": function($location, $rootScope) {
                 if (!$rootScope.loggedIn) {
@@ -25,7 +25,7 @@ app.config(['$routeProvider', function($routeProvider) {
         },
         templateUrl: "app/main/views/Estoque/CadastroProduto.html",
         controller: "CadastroProdutoController"
-    }).when("/cadastroCompra", {
+    }).when("/estoque/compra/cadastrar", {
         resolve: {
             "check": function($location, $rootScope) {
                 if (!$rootScope.loggedIn) {
@@ -35,7 +35,7 @@ app.config(['$routeProvider', function($routeProvider) {
         },
         templateUrl: "app/main/views/Estoque/CadastroCompra.html",
         controller: "CadastroCompraController"
-    }).when("/listarProduto", {
+    }).when("/estoque/produto/listar", {
         resolve: {
             "check": function($location, $rootScope) {
                 if (!$rootScope.loggedIn) {
@@ -45,7 +45,7 @@ app.config(['$routeProvider', function($routeProvider) {
         },
         templateUrl: "app/main/views/Estoque/ListarProduto.html",
         controller: "TabelaProdutoController"
-    }).when("/listarEstoque", {
+    }).when("/estoque/listar", {
         resolve: {
             "check": function($location, $rootScope) {
                 if (!$rootScope.loggedIn) {
@@ -55,7 +55,7 @@ app.config(['$routeProvider', function($routeProvider) {
         },
         templateUrl: "app/main/views/Estoque/ListarEstoque.html",
         controller: "ListarEstoqueController"
-    }).when("/listarCompra", {
+    }).when("/estoque/compra/listar", {
         resolve: {
             "check": function($location, $rootScope) {
                 if (!$rootScope.loggedIn) {
@@ -65,7 +65,7 @@ app.config(['$routeProvider', function($routeProvider) {
         },
         templateUrl: "app/main/views/Estoque/ListarCompra.html",
         controller: "ListarCompraController"
-    }).when("/cadastroUnidade", {
+    }).when("/estoque/unidade/cadastrar", {
         resolve: {
             "check": function($location, $rootScope) {
                 if (!$rootScope.loggedIn) {
@@ -75,7 +75,7 @@ app.config(['$routeProvider', function($routeProvider) {
         },
         templateUrl: "app/main/views/Estoque/CadastroUnidade.html",
         controller: "CadastroUnidadeController"
-    }).when("/listarUnidade", {
+    }).when("/estoque/unidade/listar", {
         resolve: {
             "check": function($location, $rootScope) {
                 if (!$rootScope.loggedIn) {

@@ -1,19 +1,31 @@
-<body>
-
-    <div class="container">
-
-        <div class="row">
-            <div class="col-sm-4"></div>
-            <div class="col-sm-4">
-                <a href="/#!/cadastroCompra" class="btn btn-default btn-block">Cadastro Compra</a> </br>
-                <a href="/#!/cadastroProduto" class="btn btn-default btn-block">Cadastro produto</a> </br>
-                <a href="/#!/tabelaProduto" class="btn btn-default btn-block">Visualizar Estoque</a></br>
-
-
-            </div>
-            <div class="col-sm-4"></div>
+<div ng-controller="EstoqueController">
+    <div class="row">
+        <div class="col-sm-2">
         </div>
-        <!-- row -->
+        <div class="col-sm-4">
+            <a href="/#!/estoque/compra/cadastrar" class="btn btn-default btn-block btn-primary">{{cadCompra}}</a> <br/>
+            <a href="/#!/estoque/produto/cadastrar" class="btn btn-default btn-block btn-primary">{{cadProduto}}</a> <br/>
+            <a href="/#!/estoque/unidade/cadastrar" class="btn btn-default btn-block btn-primary">{{cadUnidade}}</a> <br/>
+        </div>
 
+        <div class="col-sm-4">
+            <a href="/#!/estoque/compra/listar" class="btn btn-default btn-block btn-info">{{compra}}</a> <br/>
+            <a href="/#!/estoque/produto/listar" class="btn btn-default btn-block btn-info">{{produto}}</a> <br/>
+            <a href="/#!/estoque/unidade/listar" class="btn btn-default btn-block btn-info">{{unidade}}</a><br/>
+        </div>
+
+        <div class="col-sm-2">
+        </div>
     </div>
-</body>
+    <!-- row -->
+
+    <div class="row">
+        <div class="col-sm-2">
+        </div>
+        <div class="col-sm-8">
+            <a href="/#!/estoque/listar" class="btn btn-default btn-block btn-success">{{principal}}</a><br/>
+        </div>
+        <div class="col-sm-2">
+        </div>
+    </div>
+</div>

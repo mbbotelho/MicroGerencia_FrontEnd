@@ -12,6 +12,7 @@
     <link rel="stylesheet" href="vendor/metisMenu/metisMenu.min.css">
     <link rel="stylesheet" href="dist/css/sb-admin-2.css">
     <link rel="stylesheet" href="vendor/morrisjs/morris.css">
+    <link rel="stylesheet" href="node_modules/ng-modal/modal.css" type="text/css" />
 </head>
 
 <body ng-controller="LoginController">
@@ -25,25 +26,44 @@
                     <span class="icon-bar"></span>
                 </button>
                 <a class="navbar-brand" href="/#!/inicio">MicroGerência - FastFrango</a>
-
-            </div>
-            <div class="nav navbar-right top-nav">
-                <a class="navbar-brand" href="/#!/" ng-click="logout()">
-                    <p ng-bind="entrarSair"></p>
-                </a>
             </div>
             <!-- /.navbar-header -->
-
+            <div class="navbar-default sidebar" ng-if="loggedIn" role="navigation">
+                <div class="sidebar-nav navbar-collapse">
+                    <ul class="nav" id="side-menu">
+                        <li>
+                            <a href="#!/inicio"><i class="fa fa-dashboard fa-fw"></i>Inicio</a>
+                        </li>
+                        <li>
+                            <a href="#!/cardapio"><i class="fa fa-table fa-fw"></i>Cardapio</a>
+                        </li>
+                        <li>
+                            <a href="#!/estoque"><i class="fa fa-edit fa-fw"></i>Estoque</a>
+                        </li>
+                        <li>
+                            <a href="#!/despesa"><i class="fa fa-wrench fa-fw"></i> Despesas</a>
+                        </li>
+                        <li>
+                            <a href="#!/pedido"><i class="fa fa-wrench fa-fw"></i> Pedido</a>
+                        </li>
+                        <li>
+                            <a href="#!/relatorio"><i class="fa fa-wrench fa-fw"></i> Relatorio</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
         </nav>
+        <div class="row">
+            <div class="col-sm-3">
+            </div>
+            <div class="col-sm-9">
+                <br/>
+                <br/>
+                <br/>
+                <ng-view></ng-view>
+            </div>
+        </div>
     </div>
-
-    <br>
-    <br>
-    <br>
-    <div class="container">
-        <ng-view></ng-view>
-    </div>
-
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <script src="vendor/jquery/jquery.min.js"></script>
     <script src="vendor/bootstrap/js/bootstrap.min.js"></script>
@@ -60,30 +80,31 @@
 
     <!-- App -->
     <script src="app/main/main.js"></script>
-    <script src="app/main/controller/IndexController.js"></script>
-    <script src="app/main/controller/CardapioController.js"></script>
-    <script src="app/main/controller/EstoqueController.js"></script>
-    <script src="app/main/controller/PessoasController.js"></script>
-    <script src="app/main/controller/LoginController.js"></script>
-    <script src="app/main/controller/CadastroCompraController.js"></script>
-    <script src="app/main/controller/CadastroProdutoController.js"></script>
-    <script src="app/main/controller/PedidoController.js"></script>
-    <script src="app/main/controller/TabelaProdutoController.js"></script>
-    <script src="app/main/controller/CadastroItensExtraController.js"></script>
-    <script src="app/main/controller/CadastroItensController.js"></script>
-    <script src="app/main/controller/DespesaController.js"></script>
-    <script src="app/main/controller/CadastroDespesaController.js"></script>
-    <script src="app/main/controller/CadastroTipoDespesaController.js"></script>
-    <script src="app/main/controller/TabelaDespesaController.js"></script>
-    <script src="app/main/controller/TabelaCardapioController.js"></script>
+    <script src="app/main/controller/Inicio/IndexController.js"></script>
+    <script src="app/main/controller/Pessoas/PessoasController.js"></script>
+    <script src="app/main/controller/Login/LoginController.js"></script>
 
-    <script>
-        $(document).ready(function() {
-            $('#dataTables-example').DataTable({
-                responsive: true
-            });
-        });
-    </script>
+    <script src="app/main/controller/Cardapio/CardapioController.js"></script>
+    <script src="app/main/controller/Cardapio/CadastroItensExtraController.js"></script>
+    <script src="app/main/controller/Cardapio/CadastroItensController.js"></script>
+    <script src="app/main/controller/Cardapio/ListarCardapioController.js"></script>
+
+    <script src="app/main/controller/Estoque/EstoqueController.js"></script>
+    <script src="app/main/controller/Estoque/TabelaProdutoController.js"></script>
+    <script src="app/main/controller/Estoque/CadastroProdutoController.js"></script>
+    <script src="app/main/controller/Estoque/CadastroCompraController.js"></script>
+    <script src="app/main/controller/Estoque/CadastroUnidadeController.js"></script>
+    <script src="app/main/controller/Estoque/ListarEstoqueController.js"></script>
+    <script src="app/main/controller/Estoque/ListarCompraController.js"></script>
+    <script src="app/main/controller/Estoque/ListarUnidadeController.js"></script>
+    <script src="app/main/controller/Estoque/ListarProdutoController.js"></script>
+
+    <script src="app/main/controller/Despesa/DespesaController.js"></script>
+    <script src="app/main/controller/Despesa/CadastroDespesaController.js"></script>
+    <script src="app/main/controller/Despesa/CadastroTipoDespesaController.js"></script>
+    <script src="app/main/controller/Despesa/TabelaDespesaController.js"></script>
+
+    <script src="node_modules/ng-modal/src/modal.js"></script>
 </body>
 
 </html>

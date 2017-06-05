@@ -2,6 +2,40 @@
     "cardapio": {
         "page": "Cardapio",
         "tabela": "Itens Cadastrados no Cardápio",
-        "titles": ["Produto", "Serve Quantas Pessoas", "Item Extra", "Ações"]
+        "titles": ["Produto", "Serve Quantas Pessoas", "Item Extra", "Ações"],
+        "itemExtra": "Cadastro de Itens Extras do Cardápio",
+        "item": "Cadastro de Itens do Cardápio"
+    },
+
+    "estoque": {
+        "principal": {
+            "page": "Vizualizar Estoque",
+            "titles": ["Código", "Produto", "Quantidade", "Unidade", "Última Compra", "Precisa Repor?", "Ações"],
+            "tabela": "Produtos Presentes no Estoque"
+        },
+        "compra": {
+            "page": "Compras Registradas",
+            "titles": ["Código", "Produto", "Quantidade", "Unidade", "Valor", "Data da Compra", "Ações"],
+            "tabela": "Produtos Utilizados no Cardápio Cadastrados"
+        },
+        "produto": {
+            "page": "Produtos Registrados",
+            "titles": ["Código", "Produto", "Unidade", "Ações"],
+            "tabela": "Compras Cadastradas no Estoque"
+        },
+        "unidade": {
+            "page": "Unidades de Medidas Registrados",
+            "titles": ["Código", "Produto", "Ações"],
+            "tabela": "Produtos Presentes no Estoque"
+        },
+        "cadCompra": {
+            "page": "Cadastro de Compras Feitas"
+        },
+        "cadProduto": {
+            "page": "Cadastro de Produto Comum Utilizado"
+        },
+        "cadUnidade": {
+            "page": "Cadastro de Unidades de Medidas"
+        }
     }
 }

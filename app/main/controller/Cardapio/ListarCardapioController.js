@@ -1,5 +1,5 @@
 angular.module('MicroGerApp')
-    .controller('TabelaCardapioController', ['$scope', '$http', function($scope, $http) {
+    .controller('ListarCardapioController', ['$scope', '$http', function($scope, $http) {
 
         $http({
             method: 'GET',

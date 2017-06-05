@@ -21,8 +21,7 @@
         "karma-safari-launcher": "^1.0.0",
         "protractor": "^4.0.9",
         "yarn": "^0.25.4",
-        "jquery": "^1.12.4",
-        "ng-modal": "~1.2.0"
+        "jquery": "^1.12.4"
     },
     "main": "index.html",
     "author": "amandapersampa <amandapersampa@hotmail.com>"

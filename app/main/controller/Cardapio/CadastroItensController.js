@@ -4,7 +4,7 @@ angular.module('MicroGerApp')
             method: 'GET',
             url: 'json/Dicionario.json'
         }).then(function successCallback(response) {
-            $scope.titulo = response.data.cardapio.item;
+            $scope.page = response.data.cardapio.cadItem.page;
         });
 
         $scope.tipoItens = [{
@@ -23,12 +23,38 @@ angular.module('MicroGerApp')
             {
                 nome: 'Lanche',
                 id: 4
-            },
-            {
-                nome: 'Prato Feito',
-                id: 5
             }
         ];
+
+        $scope.produtos = [{
+                nome: 'Frango (kg)',
+                id: 1
+            },
+            {
+                nome: 'Frango (g)',
+                id: 2
+            },
+            {
+                nome: 'Açai (ml)',
+                id: 3
+            },
+            {
+                nome: 'Açai (L)',
+                id: 5
+            },
+            {
+                nome: 'Batata (g)',
+                id: 4
+            },
+            {
+                nome: 'Refrigerante (garrafa)',
+                id: 7
+            },
+            {
+                nome: 'Refrigerante (lata)',
+                id: 8
+            }
+        ]
 
         $scope.qtItens = [{
                 nome: '1',

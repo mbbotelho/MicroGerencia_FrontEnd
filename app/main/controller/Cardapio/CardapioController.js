@@ -25,7 +25,7 @@ app.config(['$routeProvider', function($routeProvider) {
             }
         },
         templateUrl: "app/main/views/Cardapio/ListarItens.html",
-        controller: "CadastroItensController"
+        controller: "ListarItensController"
     }).when("/cardapio/cadastrarExtra", {
         resolve: {
             "check": function($location, $rootScope) {
@@ -36,6 +36,16 @@ app.config(['$routeProvider', function($routeProvider) {
         },
         templateUrl: "app/main/views/Cardapio/CadastroItensExtraCardapio.html",
         controller: "CadastroItensExtraController"
+    }).when("/cardapio/listarExtra", {
+        resolve: {
+            "check": function($location, $rootScope) {
+                if (!$rootScope.loggedIn) {
+                    $location.path('/login');
+                }
+            }
+        },
+        templateUrl: "app/main/views/Cardapio/ListarItensExtra.html",
+        controller: "ListarItensExtraController"
     }).when("/cardapio/listar", {
         resolve: {
             "check": function($location, $rootScope) {

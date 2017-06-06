@@ -5,26 +5,43 @@ angular.module('MicroGerApp')
             method: 'GET',
             url: 'json/Dicionario.json'
         }).then(function successCallback(response) {
-            $scope.page = response.data.cardapio.page;
-            $scope.tabela = response.data.cardapio.tabela;
-            $scope.titles = response.data.cardapio.titles;
+            $scope.page = response.data.cardapio.principal.page;
+            $scope.tabela = response.data.cardapio.principal.tabela;
+            $scope.titles = response.data.cardapio.principal.titles;
         });
 
         $scope.itens = [{
+                id: 1,
                 nome: 'Porção 1',
+                tipo: 'Porção',
+                ingrediente: 'Frango',
+                quantidade: 1,
+                unidade: 'kg',
                 serve: 3,
-                itemExtra: '500g de Batata, 500g de Aipim'
+                itemExtra: '500g de Batata, 500g de Aipim',
+                valor: 20
             },
             {
-                nome: 'Porção 2',
-                serve: 1,
-                itemExtra: '1 Lata de refrigerante'
+                id: 1,
+                nome: 'Porção 1',
+                tipo: 'Porção',
+                ingrediente: 'Frango',
+                quantidade: 1,
+                unidade: 'kg',
+                serve: 3,
+                itemExtra: '500g de Batata, 500g de Aipim',
+                valor: 20
             },
-
             {
-                nome: 'Porção de Batata',
-                serve: 1,
-                itemExtra: 'nada'
+                id: 1,
+                nome: 'Porção 1',
+                tipo: 'Porção',
+                ingrediente: 'Frango',
+                quantidade: 1,
+                unidade: 'kg',
+                serve: 3,
+                itemExtra: '500g de Batata, 500g de Aipim',
+                valor: 20
             }
         ];
 

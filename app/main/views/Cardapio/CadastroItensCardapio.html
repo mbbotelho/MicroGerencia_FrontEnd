@@ -1,50 +1,85 @@
-<body ng-controller="CadastroItensController">
-    <div class="container">
+<div ng-controller="CadastroItensController">
+    <div class="col-sm-1"></div>
+    <div class="col-sm-10">
         <div class="page-header">
-            <h1>{{titulo}}</h1>
+            <h1>{{page}}</h1>
         </div>
-        <div class="row">
-            <div class="col-sm-8">
-                <form>
-                    <div class="form-group">
-                        <label for="nome">Nome do produto</label>
-                        <input type="text" class="form-control" id="qtd">
+        <form>
+            <div class="row">
+                <div class="form-group col-sm-5">
+                    <div class="row">
+                        <label for="nome">Nome do Item do Cardápio:</label>
                     </div>
                     <div class="row">
-                        <div class="form-group col-sm-6">
-                            <label for="tipo">Tipo de Item</label>
-                            <select class="form-control" id="sel1" ng-options="item as item.nome for item in tipoItens track by item.id" ng-model="item">
-						</select>
-                        </div>
+                        <input type="text" class="form-control" id="nome" />
+                    </div>
+                </div>
+                <div class="form-group col-sm-1"></div>
+                <div class="form-group col-sm-5">
+                    <div class="row">
+                        <label for="tipo">Tipo de Item:</label>
                     </div>
                     <div class="row">
-                        <div class="form-group col-sm-6">
-                            <label for="qtd">Quantidade</label> <input type="number" class="form-control" id="qtd">
-                        </div>
+                        <select class="form-control" id="sel1" ng-options="item as item.nome for item in tipoItens track by item.id" ng-model="item"></select>
                     </div>
-                    <div class="form-group row">
-                        <div class="col-sm-6">
-                            <label for="tipo">Quantidade de Itens Extra</label>
-                        </div>
-                    </div>
-                    <div class="form-group row">
-                        <div class="col-sm-6">
-                            <select class="form-control" id="qtdItemSel" ng-options="qtd as qtd.nome for qtd in qtItens track by qtd.id" ng-model="qtd">
-						</select>
-                        </div>
-                    </div>
-                    <div class="form-group">
-                        <label for="valor">Valor</label> <input type="number" class="form-control" id="valor">
-                    </div>
-                    <br>
-                    <button type="reset" class="btn btn-primary">
-						<span class="glyphicon glyphicon-trash"></span> Limpar
-					</button>
-                    <button type="submit" class="btn btn-success">
-						<span class="glyphicon glyphicon-ok"></span> Salvar
-					</button>
-                </form>
+                </div>
             </div>
-        </div>
+            <div class="row">
+                <div class="form-group col-sm-5">
+                    <div class="row">
+                        <label for="qtd">Ingrediente Principal:</label>
+                    </div>
+                    <div class="row">
+                        <select class="form-control" id="sel2" ng-options="produto as produto.nome for produto in produtos track by produto.id" ng-model="produto"></select>
+                    </div>
+                </div>
+                <div class="form-group col-sm-1"></div>
+                <div class="form-group col-sm-5">
+                    <div class="row">
+                        <label for="nome">Quantidade:</label>
+                    </div>
+                    <div class="row">
+                        <input type="number" class="form-control" id="qtd" />
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="form-group col-sm-5">
+                    <div class="row">
+                        <label for="tipo">Serve a:</label>
+                    </div>
+                    <div class="row">
+                        <input type="number" class="form-control" id="serve" />
+                    </div>
+                </div>
+                <div class="form-group col-sm-1"></div>
+                <div class="form-group col-sm-5">
+                    <div class="row">
+                        <label for="tipo">Quantidade de Itens Extra</label>
+                    </div>
+                    <div class="row">
+                        <input type="number" class="form-control" id="qtdExtra" />
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="form-group col-sm-5">
+                    <div class="row">
+                        <label for="valor">Valor</label>
+                    </div>
+                    <div class="row">
+                        <input type="number" class="form-control" id="valor" />
+                    </div>
+                </div>
+            </div>
+            <br>
+            <button type="reset" class="btn btn-primary">
+						<span class="glyphicon glyphicon-trash"></span> Limpar
+				</button>
+            <button type="submit" class="btn btn-success">
+						<span class="glyphicon glyphicon-ok"></span> Salvar
+				</button>
+        </form>
     </div>
-</body>
+    <div class="col-sm-2"></div>
+</div>

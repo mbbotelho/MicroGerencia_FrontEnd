@@ -1,10 +1,27 @@
 {
     "cardapio": {
-        "page": "Cardapio",
-        "tabela": "Itens Cadastrados no Cardápio",
-        "titles": ["Produto", "Serve Quantas Pessoas", "Item Extra", "Ações"],
-        "itemExtra": "Cadastro de Itens Extras do Cardápio",
-        "item": "Cadastro de Itens do Cardápio"
+        "principal": {
+            "page": "Cardapio",
+            "tabela": "Itens Cadastrados no Cardápio",
+            "titles": ["Código", "Nome", "Tipo", "Ing. Principal", "Quantidade", "Unidade", "Serve à", "Item Extra", "Valor", "Ações"]
+        },
+        "itemExtra": {
+            "page": "Itens Extras do Cardápio",
+            "titles": ["Código", "Produto", "Unidade", "Quantidade", "Ações"],
+            "tabela": "Itens Extras Utilizados no Cardápio Cadastrados"
+        },
+        "item": {
+            "page": "Itens do Cardápio",
+            "titles": ["Código", "Nome", "Produto", "Quantidade", "Unidade", "Qtd. Itens Extra", "Valor", "Ações"],
+            "tabela": "Produtos Utilizados no Cardápio Cadastrados"
+        },
+        "cadItemExtra": {
+            "page": "Cadastro de Itens Extras do Cardápio"
+        },
+        "cadItem": {
+            "page": "Cadastro de Itens do Cardápio"
+        }
+
     },
 
     "estoque": {
